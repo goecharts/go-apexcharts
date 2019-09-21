@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>Apexcharts</title>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</head>
+<body>
+<div id="chart"></div>
+    <script>
+        var options = {
+            chart: {
+                height: 380,
+                width: "100%",
+                type: "line",
+                zoom: {
+                    enabled: false
+                }
+            },
+            series: [
+                {
+                    name: "Series 1",
+                    data: [45, 52, 38, 45, 19, 33]
+                }
+            ],
+            xaxis: {
+                categories: [
+                    "01 Jan",
+                    "02 Jan",
+                    "03 Jan",
+                    "04 Jan",
+                    "05 Jan",
+                    "06 Jan"
+                ]
+            }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+
+        chart.render();
+
+    </script>
+</body>
+</html>
